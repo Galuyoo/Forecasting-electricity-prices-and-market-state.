@@ -21,6 +21,13 @@ This project is especially relevant to energy economics, grid operations, and da
 - compare forecasting approaches for electricity price prediction
 - cluster market conditions into interpretable operational states
 
+## Project Highlights
+
+- Built an end-to-end pipeline for Spanish electricity price forecasting using hourly market and weather data
+- Reduced feature redundancy with PCA while retaining 95% of variance
+- Compared forecasting approaches and identified the limits of metric-only model selection
+- Discovered 5 interpretable market states through K-Means clustering
+
 ## Dataset
 
 The project uses the public Kaggle dataset:
@@ -202,6 +209,15 @@ This adds a second layer of value beyond forecasting. Instead of only predicting
 
 ## Results Summary
 
+### Key outcomes
+
+- built a multi-source time series pipeline using energy and weather data
+- reduced redundant features while preserving most of the information
+- improved Prophet performance through tuning
+- found that dimensionality reduction improved efficiency more than accuracy
+- showed that metric-only model selection can be misleading
+- identified **5 interpretable market states** using unsupervised learning
+
 ## Key Visuals
 
 ### PCA cumulative explained variance
@@ -219,34 +235,31 @@ This 3D cluster plot shows how market conditions can be grouped into interpretab
 
 ![Market state clustering](assets/cluster_plot.png)
 
-### Key outcomes
-
-- built a multi-source time series pipeline using energy and weather data
-- reduced redundant features while preserving most of the information
-- improved Prophet performance through tuning
-- found that dimensionality reduction improved efficiency more than accuracy
-- showed that metric-only model selection can be misleading
-- identified **5 interpretable market states** using unsupervised learning
-
 ## Repository Structure
-
-A cleaner project structure is recommended for this repository:
 
 ```text
 .
 ├── README.md
+├── REPORT.pdf
 ├── requirements.txt
+├── .gitignore
+├── assets/
+│   ├── pca_variance.png
+│   ├── prophet_forecast.png
+│   └── cluster_plot.png
+├── datasets/
+│   ├── intermediate/
+│   │   └── cleaned_energy_dataset.csv
+│   ├── processed/
+│   │   ├── energy_dataset.csv
+│   │   └── final_dataset.csv
 ├── notebooks/
 │   ├── 01_energy_preprocessing.ipynb
 │   ├── 02_weather_preprocessing.ipynb
 │   ├── 03_feature_engineering.ipynb
-│   ├── 04_price_forecasting.ipynb
+│   ├── 04_price_forecasting_final_dataset.ipynb
+│   ├── 04_price_forecasting_reduced_dataset.ipynb
 │   └── 05_market_state_clustering.ipynb
-├── assets/
-│   ├── pipeline_diagram.png
-│   ├── pca_variance.png
-│   ├── prophet_forecast.png
-│   └── cluster_plot.png
 └── results/
     └── metrics_summary.csv
 ```
@@ -256,8 +269,8 @@ A cleaner project structure is recommended for this repository:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Galuyoo/Forecasting-electricity-prices-and-market-state..git
-cd Forecasting-electricity-prices-and-market-state.
+git clone https://github.com/Galuyoo/Forecasting-electricity-prices-and-market-state..git electro-project
+cd electro-project
 ```
 
 ### 2. Create a virtual environment
