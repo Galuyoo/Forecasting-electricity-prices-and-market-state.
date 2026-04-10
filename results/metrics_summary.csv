@@ -1,0 +1,5 @@
+task,model,dataset,mae,rmse,mape,r2,notes
+price_forecasting,Prophet,final_dataset,5.7297,7.7047,12.64,0.7069,Tuned Prophet on final dataset
+price_forecasting,Prophet,reduced_dataset,5.7297,7.7047,12.64,0.7069,Tuned Prophet on PCA-reduced dataset
+clustering,KMeans,market_states,,,,,Optimal k=5 based on elbow method and silhouette score
+feature_engineering,PCA,weather_features,,,,,Reduced columns from 63 to 51 while preserving 95 percent variance

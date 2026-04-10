@@ -202,6 +202,23 @@ This adds a second layer of value beyond forecasting. Instead of only predicting
 
 ## Results Summary
 
+## Key Visuals
+
+### PCA cumulative explained variance
+This figure shows how PCA was used to reduce redundant weather features while preserving most of the information in the dataset.
+
+![PCA cumulative explained variance](assets/pca_variance.png)
+
+### Prophet forecast on test data
+This forecast compares predicted electricity prices against actual values on the test set and illustrates how the model captures recurring seasonal structure.
+
+![Prophet forecast](assets/prophet_forecast.png)
+
+### Market state clustering
+This 3D cluster plot shows how market conditions can be grouped into interpretable states using fossil gas generation, total load, and electricity price.
+
+![Market state clustering](assets/cluster_plot.png)
+
 ### Key outcomes
 
 - built a multi-source time series pipeline using energy and weather data

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS / Windows
+desktop.ini
+Thumbs.db
+
+# Data / outputs
+*.log
+*.tmp
+
+# Optional large generated artifacts
+results/*.png
